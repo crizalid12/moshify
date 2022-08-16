@@ -104,12 +104,12 @@ a {
   border-radius: 20px;
   font-size: 2rem;
   font-weight: 600;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   white-space: nowrap;
 }
 
 .badge--primary {
-  background: var(--color-primary);
+  background: #126de4;
   color: #fff;
 }
 
@@ -120,7 +120,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -330,6 +330,10 @@ a {
 }
 
 /* Plans */
+.plan {
+  transition: all 0.2s ease-in-out;
+}
+
 .plan__name {
   color: #fff;
   margin: 0;
@@ -730,5 +734,41 @@ a {
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* Plans Block */
+
+.block--plans .plan:hover {
+  transform: scale(1.1);
+}
+
+.block--plans {
+  margin-top: 3rem;
+  gap: 8rem 3.5rem;
+}
+.block--plans .card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .block--plans.container {
+    align-items: center;
+  }
+
+  .plan--popular .card .card__body .list {
+    margin-bottom: 4rem;
+  }
+
+  .plan--popular .card .card__header .plan__name {
+    margin-top: 3.5rem;
+  }
+  .plan--popular .card .card__header .plan__description {
+    margin-bottom: 3.5rem;
+  }
+
+  .plan__details {
+    display: flex;
+    align-items: center;
   }
 }
