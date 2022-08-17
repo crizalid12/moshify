@@ -402,6 +402,10 @@ a {
   margin-top: 0;
 }
 
+.media__title--white {
+  color: #fff;
+}
+
 .media__body {
   margin: 0 2rem;
 }
@@ -799,5 +803,25 @@ a {
 @media screen and (min-width: 768px) {
   .block--feature:nth-of-type(even) .block--feature__description {
     order: 2;
+  }
+}
+
+/* Showcase Block */
+.block-showcase__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    justify-self: end;
+  }
+
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
   }
 }
